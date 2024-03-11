@@ -44,7 +44,7 @@ def _get_plugin(gl=False):
             os.environ['PATH'] += ';' + cl_path
 
     # Compiler options.
-    opts = ['-DNVDR_TORCH']
+    opts = ['-DNVDR_TORCH', '-DGLOG_USE_GLOG_EXPORT']
 
     # Linker options for the GL-interfacing plugin.
     ldflags = []
