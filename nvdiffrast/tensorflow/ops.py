@@ -26,7 +26,7 @@ def _get_gl_opts():
 # Load the cpp plugin.
 def _get_plugin():
     fn = os.path.join(os.path.dirname(__file__), 'tf_all.cu')
-    return plugin_loader.get_plugin(fn, extra_nvcc_options=_get_gl_opts() + ['-DNVDR_TENSORFLOW'])
+    return plugin_loader.get_plugin(fn, extra_nvcc_options=_get_gl_opts() + ['-DNVDR_TENSORFLOW', '-DGLOG_USE_GLOG_EXPORT'])
 
 # Convert parameter to a numpy array if possible.
 def _get_constant(x, dtype):

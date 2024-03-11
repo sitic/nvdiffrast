@@ -47,7 +47,7 @@ def _get_plugin(gl=False):
             os.environ['PATH'] += ';' + cl_path
 
     # Compiler options.
-    common_opts = ['-DNVDR_TORCH']
+    common_opts = ['-DNVDR_TORCH', '-DGLOG_USE_GLOG_EXPORT']
     cc_opts = []
     if os.name == 'nt':
         cc_opts += ['/wd4067', '/wd4624'] # Disable warnings in torch headers.
